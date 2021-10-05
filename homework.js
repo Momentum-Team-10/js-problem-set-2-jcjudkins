@@ -6,18 +6,50 @@
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
 
+function remove(array, arrayItem){
+    return array.filter((item) => item !== arrayItem)
+}
+remove()
+//this was writtin using a for loop.  
+
 // 2. Revisit your "remove" function. Make sure that it does not change the original
 // array but instead returns a new array.
+//const students = ['Cadence', 'Ordel', 'Marion']
+function remove(array, arrayItem){
+    return array.filter((item) => item !== arrayItem)
+}
+remove()
 
 // 3. Create a function called "sum" that takes an array of numbers and
 // returns the sum of those numbers.
+// Const number = [1, -1, 2, 3];
+function sum(array){
+    if (array.length === 0) {
+        return 0
+    }
+   return array.reduce((num, total) => total += num)
+}
+
 
 // 4. Create a function called "average" that takes an array of numbers
 // and returns the average of those numbers.
-
+function average(array) {
+    if (array.length === 0){
+        return 
+    }
+    return sum(array) / array.length
+}
 // 5. Create a function called "minimum" that takes an array of numbers and
 // returns the smallest number in that array.
-
+function minimum (array) {
+    let min = array[0]
+    for (let num of array) {
+        if (num < min) {
+        min = num
+    }
+}
+    return min
+}
 // 6. There are many techniques to sort arrays in programming. Your programming
 // language will likely include the ability to do this. We are going to
 // implement sorting ourselves, however.
